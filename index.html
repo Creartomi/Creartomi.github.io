@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="tl" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio ni Freddie Briones</title>
+<meta name="description" content="Portfolio ni Freddie Briones — projects, services, at contact details." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2300C2FF'/%3E%3Ctext x='50' y='57' font-size='42' text-anchor='middle' fill='white' font-family='Inter,Arial,sans-serif'%3EY%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+--bg: #0b0c0f; /* dark background */
+--panel: #12141a;
+--text: #e6e7ea;
+--muted: #98a2b3;
+--brand: #00c2ff;
+--brand-2: #8b5cf6;
+--ring: #2dd4bf;
+--ok: #22c55e;
+--danger: #ef4444;
+--shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+background: radial-gradient(1200px 600px at 90% -10%, rgba(0,194,255,.15), transparent 60%),
+radial-gradient(900px 400px at -10% 10%, rgba(139,92,246,.15), transparent 60%), var(--bg);
+color: var(--text);
+line-height: 1.6;
+}
+a{color: var(--brand); text-decoration: none}
+a:hover{opacity:.9}
+.container{max-width:1100px; margin-inline:auto; padding: 24px}
+header{position:sticky; top:0; backdrop-filter: blur(10px); background: linear-gradient(180deg, rgba(11,12,15,.8), rgba(11,12,15,.5)); border-bottom:1px solid rgba(255,255,255,.06); z-index:10}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700}
+.brand .logo{width:36px; aspect-ratio:1; border-radius:12px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); display:grid; place-items:center; color:#001018; font-weight:900}
+.actions{display:flex; gap:10px; align-items:center}
+.btn{padding:10px 14px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background:#0f1117; color:var(--text); box-shadow: var(--shadow);}
+.btn.primary{background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#06101b; border:none; font-weight:700}
+.btn:hover{transform: translateY(-1px);}
+
+
+.hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:32px; align-items:center; padding-block: 48px}
+.hero h1{font-size: clamp(28px, 3.4vw, 48px); line-height:1.1; margin:0}
+.hero p{color: var(--muted); margin-top: 10px}
+.hero .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+.tag{font-size: 12px; padding:6px 10px; border:1px solid rgba(255,255,255,.12); border-radius:999px; color:#cbd5e1}
+.card{background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:22px; box-shadow: var(--shadow)}
+.avatar{width:100%; border-radius:24px; aspect-ratio: 4/5; object-fit: cover; border:1px solid rgba(255,255,255,.1)}
+
+
+section{padding-block: 42px}
+.section-title{font-size: 20px; letter-spacing:.4px}
+
+
+.grid{display:grid; gap:18px}
+.grid.cols-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+.grid.cols-2{grid-template-columns: repeat(2, minmax(0,1fr))}
+
+
+.skill{display:flex; justify-content:space-between; align-items:center; padding:12px 14px; border-radius:16px; border:1px solid rgba(255,255,255,.08)}
+.bar{height:8px; width:60%; background: rgba(255,255,255,.06); border-radius:999px; overflow:hidden}
+.bar > i{display:block; height:100%; width:var(--w,60%); background: linear-gradient(90deg, var(--brand), var(--ring))}
+
+
+.project{display:flex; flex-direction:column; gap:8px}
+.project .thumb{border-radius:16px; overflow:hidden; aspect-ratio: 16/10; border:1px solid rgba(255,255,255,.08)}
+.project .thumb img{width:100%; height:100%; object-fit:cover}
+.project .meta{display:flex; gap:8px; flex-wrap:wrap}
+
+
+</html>
