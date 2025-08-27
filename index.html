@@ -1,42 +1,4 @@
 <!doctype html>
-<html lang="tl" dir="ltr">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio ni Freddie Briones</title>
-<meta name="description" content="Portfolio ni Freddie Briones — projects, services, at contact details." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2300C2FF'/%3E%3Ctext x='50' y='57' font-size='42' text-anchor='middle' fill='white' font-family='Inter,Arial,sans-serif'%3EY%3C/text%3E%3C/svg%3E">
-<style>
-:root{
---bg: #0b0c0f; /* dark background */
---panel: #12141a;
---text: #e6e7ea;
---muted: #98a2b3;
---brand: #00c2ff;
---brand-2: #8b5cf6;
---ring: #2dd4bf;
---ok: #22c55e;
---danger: #ef4444;
---shadow: 0 10px 30px rgba(0,0,0,.4);
-}
-*{box-sizing: border-box}
-html,body{height:100%}
-body{
-margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-background: radial-gradient(1200px 600px at 90% -10%, rgba(0,194,255,.15), transparent 60%),
-radial-gradient(900px 400px at -10% 10%, rgba(139,92,246,.15), transparent 60%), var(--bg);
-color: var(--text);
-line-height: 1.6;
-}
-a{color: var(--brand); text-decoration: none}
-a:hover{opacity:.9}
-.container{max-width:1100px; margin-inline:auto; padding: 24px}
-header{position:sticky; top:0; backdrop-filter: blur(10px); background: linear-gradient(180deg, rgba(11,12,15,.8), rgba(11,12,15,.5)); border-bottom:1px solid rgba(255,255,255,.06); z-index:10}
-.nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
-.brand{display:flex; align-items:center; gap:10px; font-weight:700}
-.brand .logo{width:36px; aspect-ratio:1; border-radius:12px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); display:grid; place-items:center; color:#001018; font-weight:900}
-.actions{display:flex; gap:10px; align-items:center}
-.btn{padding:10px 14px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background:#0f1117; color:var(--text); box-shadow: var(--shadow);}
 .btn.primary{background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#06101b; border:none; font-weight:700}
 .btn:hover{transform: translateY(-1px);}
 
@@ -70,4 +32,111 @@ section{padding-block: 42px}
 .project .meta{display:flex; gap:8px; flex-wrap:wrap}
 
 
+.contact{display:grid; grid-template-columns: 1fr 1fr; gap:18px}
+.input{display:flex; flex-direction:column; gap:8px}
+.input input, .input textarea{padding:12px 14px; border-radius:14px; border:1px solid rgba(255,255,255,.14); background: #0f1117; color:var(--text)}
+.input textarea{min-height:120px; resize:vertical}
+.note{font-size:12px; color:var(--muted)}
+
+
+footer{padding:28px 24px; border-top:1px solid rgba(255,255,255,.08); color:var(--muted); text-align:center}
+
+
+@media (max-width: 900px){
+.hero{grid-template-columns: 1fr;}
+.grid.cols-3{grid-template-columns: 1fr 1fr}
+.contact{grid-template-columns: 1fr}
+}
+@media (max-width: 600px){
+.grid.cols-3, .grid.cols-2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="meta">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">Netlify</span>
+</div>
+<div style="display:flex; gap:10px; margin-top:6px">
+<a class="btn" href="#">Live Demo</a>
+<a class="btn" href="#">Source Code</a>
+</div>
+</article>
+
+
+<article class="project card">
+<div class="thumb"><img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=1200&auto=format&fit=crop" alt="Project 2" /></div>
+<h3>Sticker Brand Kit</h3>
+<p class="note">Branding + sticker set para sa small business; ready for print.</p>
+<div class="meta">
+<span class="tag">Branding</span>
+<span class="tag">Print</span>
+<span class="tag">Photoshop</span>
+</div>
+<div style="display:flex; gap:10px; margin-top:6px">
+<a class="btn" href="#">Case Study</a>
+<a class="btn" href="#">PDF</a>
+</div>
+</article>
+
+
+<article class="project card">
+<div class="thumb"><img src="https://images.unsplash.com/photo-1551817958-20204c6e96a0?q=80&w=1200&auto=format&fit=crop" alt="Project 3" /></div>
+<h3>Print Ordering Form</h3>
+<p class="note">Simpleng online form para sa custom prints (mugs/stickers).</p>
+<div class="meta">
+<span class="tag">Google Forms</span>
+<span class="tag">Automation</span>
+</div>
+<div style="display:flex; gap:10px; margin-top:6px">
+<a class="btn" href="#">Live Demo</a>
+<a class="btn" href="#">Tutorial</a>
+</div>
+</article>
+</div>
+</section>
+
+
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+<div class="card">
+<form class="contact" onsubmit="handleContact(event)">
+<div class="input">
+<label for="name">Pangalan</label>
+<input id="name" name="name" required placeholder="Juan Dela Cruz" />
+</div>
+<div class="input">
+<label for="email">Email</label>
+<input id="email" type="email" name="email" required placeholder="juan@example.com" />
+</div>
+<div class="input" style="grid-column: 1/-1;">
+<label for="message">Mensahe</label>
+<textarea id="message" name="message" required placeholder="Hi! Interesado ako sa services mo…"></textarea>
+</div>
+<div style="display:flex; gap:10px; align-items:center">
+<button class="btn primary" type="submit">Send</button>
+<span class="note">Tip: Palitan ang JS para gumamit ng Formspree/Netlify forms kung gusto mo ng tunay na submissions.</span>
+</div>
+</form>
+</div>
+</section>
+</main>
+
+
+<footer>
+© <span id="y"></span> Freddie Briones. All rights reserved. • <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+</footer>
+
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+function handleContact(e){
+e.preventDefault();
+const data = Object.fromEntries(new FormData(e.target).entries());
+const mail = `mailto:hello@yourdomain.com?subject=Inquiry%20from%20${encodeURIComponent(data.name)}&body=${encodeURIComponent(data.message + '\n\nReply to: ' + data.email)}`;
+window.location.href = mail;
+}
+</script>
+</body>
 </html>
